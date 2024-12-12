@@ -1,0 +1,95 @@
+.game {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-board {
+  margin-right: 20px;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+  position: relative;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.piece {
+  display: block;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  margin: 10%;
+  animation: drop-in 0.5s ease-out;
+}
+
+@keyframes drop-in {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.piece.black {
+  background-color: #000;
+}
+
+.piece.white {
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+.status {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.winning-status {
+  color: #ff0000;
+  font-weight: bold;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.game-info {
+  width: 200px;
+}
+
+.game-info ol {
+  padding-left: 20px;
+}
+
+.game-info button {
+  margin: 5px 0;
+}
